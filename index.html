@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .logo {
+            position: fixed;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+        }
+        .logoup {
+            background-image: url(https://sir.kr/img/common/dow/ico2-dw06.svg);
+        }
+        .logodown {
+            background-image: url(https://sir.kr/img/common/dow/ico2-dw05.svg);
+        }
+        </style>
+        <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var logo = document.querySelector('.logo');
+            var scroll_before = 0;
+            document.addEventListener('scroll', function () {
+                if (scroll_before > document.documentElement.scrollTop) {
+                    logo.className = logo.className.replace('logodown', 'logoup');
+                } else {
+                    logo.className = logo.className.replace('logoup', 'logodown');
+                }
+                scroll_before = document.documentElement.scrollTop;
+            }, false);
+        }, false);
+        </script>
+    </head>
+    <body>
+        <h1 id="logo" class="logo logoup"></h1>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </body>
+</html>
